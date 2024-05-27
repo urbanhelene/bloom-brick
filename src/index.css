@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -39,6 +42,27 @@ h1 {
   line-height: 1.1;
 }
 
+h2 {
+  font-size: 1.4em;
+  line-height: 1.1;
+  color: #2E2E2E;
+  font-family: 'Inter', sans-serif;
+}
+
+h3 {
+  font-size: 0.9em;
+  line-height: 1.1;
+  color: #2E2E2E;
+  margin-top: 0.3rem;
+}
+
+h4 {
+  font-size: 1.2em;
+  line-height: 1.1;
+  color: #4F7942;
+  margin-top: 0.8rem;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -69,4 +93,76 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.products-header {
+  color: #4F7942;
+  font-family: 'Niconne', cursive;
+  font-size: 3rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center; /* Horizontally center the text */
+  align-items: center; /* Vertically center the text */
+}
+
+.grid {
+  display: grid;
+}
+
+/* Style for the empty grid box */
+.empty-box {
+  width: 0; /* Set the width to 0 */
+  padding: 0 10rem; /* Add padding for the empty space */
+}
+
+.card {
+  border-radius: 1rem; /* Rounded edges for the boxes */
+  overflow: hidden; /* Ensures content does not overflow the box */
+  height: 24rem; /* Adjust the height as needed */
+  display: flex;
+  flex-direction: column;
+}
+
+.image-section {
+  flex: 0 0 65%; /* 60% height for the image section */
+  overflow: hidden;
+}
+
+.text-section {
+  flex: 1; /* 40% height for the text section */
+  background-color: #FAFFE5;
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.text-content {
+  flex: 1;
+  overflow: hidden; /* Ensures text does not overflow the box */
+}
+
+.small-button {
+  align-self: flex-end; /* Aligns the button to the bottom right */
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem; /* Small button text size */
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  color: white;
+}
+
+/* Reset box styles to make sure they fit the new design */
+.w-full {
+  height: 100%;
+}
+
+.shadow-xl {
+  box-shadow: 0 5px 15px -3px rgba(0, 0, 0, 0.25), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.hover\:scale-105:hover {
+  transform: scale(1.05);
 }
