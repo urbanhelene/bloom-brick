@@ -5,6 +5,13 @@ export default {
   ],
   theme: {
     extend: {},
+    colors: {
+      'yellowGreen': '#FAFFE5',
+      'darkGreen': '#4F7942',
+      'darkRed': '#800511',
+      'white': '#FFFFFF',
+      'lightGreen': '#EDFFE8',
+    }
   },
   variants: {
     extend: {},

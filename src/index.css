@@ -32,9 +32,6 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
 h1 {
@@ -99,7 +96,19 @@ button:focus-visible {
   color: #4F7942;
   font-family: 'Niconne', cursive;
   font-size: 3rem;
+  width: 100%;
   height: 5rem;
+  display: flex;
+  justify-content: center; /* Horizontally center the text */
+  align-items: center; /* Vertically center the text */
+}
+
+.products-header2 {
+  color: #4F7942;
+  font-family: 'Niconne', cursive;
+  font-size: 3rem;
+  width: 100%;
+  height: 10rem;
   display: flex;
   justify-content: center; /* Horizontally center the text */
   align-items: center; /* Vertically center the text */
@@ -121,6 +130,24 @@ button:focus-visible {
   height: 24rem; /* Adjust the height as needed */
   display: flex;
   flex-direction: column;
+}
+
+.small-button {
+  align-self: flex-end;
+  margin-top: auto; /* Move the Remove button to the bottom */
+  margin-bottom: 0.5rem; /* Add a bottom margin to separate it from the quantity buttons */
+}
+
+.basket-container .flex-1 {
+  max-width: 70%; /* Adjust the width of the flex items */
+  max-height: 300px;
+}
+
+.navbar {
+  position: fixed; /* Fix the position of the Navbar */
+  top: 0; /* Align the Navbar to the top of the viewport */
+  width: 100%; /* Make the Navbar span the entire width of the viewport */
+  z-index: 999; /* Ensure Navbar stays above other elements */
 }
 
 .image-section {
@@ -159,10 +186,18 @@ button:focus-visible {
   height: 100%;
 }
 
+.basket-container {
+  width: 100vw;
+}
+
 .shadow-xl {
   box-shadow: 0 5px 15px -3px rgba(0, 0, 0, 0.25), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 .hover\:scale-105:hover {
   transform: scale(1.05);
+}
+
+.link-hover:hover {
+  color: #133907;
 }
