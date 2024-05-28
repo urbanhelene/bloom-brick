@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alatsi&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,6 +22,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.font-lily-script {
+  font-family: 'Lily Script One', cursive;
+}
+
+.font-alatsi {
+  font-family: 'Alatsi', sans-serif;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -29,14 +42,32 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+h2 {
+  font-size: 1.4em;
+  line-height: 1.1;
+  color: #2E2E2E;
+  font-family: 'Inter', sans-serif;
+}
+
+h3 {
+  font-size: 0.9em;
+  line-height: 1.1;
+  color: #2E2E2E;
+  margin-top: 0.3rem;
+}
+
+h4 {
+  font-size: 1.2em;
+  line-height: 1.1;
+  color: #4F7942;
+  margin-top: 0.8rem;
 }
 
 button {
@@ -68,5 +99,148 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+.products-header {
+  color: #4F7942;
+  font-family: 'Niconne', cursive;
+  font-size: 3rem;
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: center; /* Horizontally center the text */
+  align-items: center; /* Vertically center the text */
+}
+
+.products-header2 {
+  color: #4F7942;
+  font-family: 'Niconne', cursive;
+  font-size: 3rem;
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  justify-content: center; /* Horizontally center the text */
+  align-items: center; /* Vertically center the text */
+}
+
+.grid {
+  display: grid;
+}
+
+/* Style for the empty grid box */
+.empty-box {
+  width: 0; /* Set the width to 0 */
+  padding: 0 10rem; /* Add padding for the empty space */
+}
+
+.card {
+  border-radius: 1rem; /* Rounded edges for the boxes */
+  overflow: hidden; /* Ensures content does not overflow the box */
+  height: 24rem; /* Adjust the height as needed */
+  display: flex;
+  flex-direction: column;
+}
+
+.small-button {
+  align-self: flex-end;
+  margin-top: auto; /* Move the Remove button to the bottom */
+  margin-bottom: 0.5rem; /* Add a bottom margin to separate it from the quantity buttons */
+}
+
+.basket-container .flex-1 {
+  max-width: 70%; /* Adjust the width of the flex items */
+  max-height: 300px;
+}
+
+.navbar {
+  position: fixed; /* Fix the position of the Navbar */
+  top: 0; /* Align the Navbar to the top of the viewport */
+  width: 100%; /* Make the Navbar span the entire width of the viewport */
+  z-index: 999; /* Ensure Navbar stays above other elements */
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  border-bottom: 2px solid #4F7942; /* Green border at the bottom */
+  height: 4rem; /* Adjust the height of the Navbar */
+  align-content: center;
+}
+
+.text-darkGreen {
+  color: #4F7942;
+  font-size: 1.2rem; /* Increase the font size of the text */
+}
+
+.link-hover:hover {
+  color: #133907;
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.image-section {
+  flex: 0 0 65%; /* 60% height for the image section */
+  overflow: hidden;
+}
+
+.text-section {
+  flex: 1; /* 40% height for the text section */
+  background-color: #FAFFE5;
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.text-content {
+  flex: 1;
+  overflow: hidden; /* Ensures text does not overflow the box */
+}
+
+.small-button {
+  align-self: flex-end; /* Aligns the button to the bottom right */
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem; /* Small button text size */
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  color: white;
+}
+
+/* Reset box styles to make sure they fit the new design */
+.w-full {
+  height: 100%;
+}
+
+.basket-container {
+  width: 100vw;
+}
+
+.shadow-xl {
+  box-shadow: 0 5px 15px -3px rgba(0, 0, 0, 0.25), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.hover\:scale-105:hover {
+  transform: scale(1.05);
+}
+
+.link-hover:hover {
+  color: #133907;
+}
+
+@media (max-width: 639px) {
+  .remove-button {
+    display: none;
   }
 }
