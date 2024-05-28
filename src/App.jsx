@@ -42,7 +42,7 @@ function App() {
             <Navbar itemCount={itemCount} />
             <div className="basket-container"> {/* Add this div to wrap the Basket component */}
                 <Routes>
-                    <Route path="/" element={<Cards addToBasket={addToBasket} />} />
+                    <Route path="/shop" element={<Cards addToBasket={addToBasket} />} />
                     <Route path="/basket" element={
                         <Basket
                             basket={basket}
@@ -50,7 +50,7 @@ function App() {
                             removeItem={removeItem}
                         />}
                     />
-                    <Route path="/home" element={<Home />} /> {/* Add this route for the Home component */}
+                    <Route path="/" element={<Home />} /> {/* Add this route for the Home component */}
                 </Routes>
             </div>
         </Router>

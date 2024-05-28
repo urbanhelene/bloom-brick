@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alatsi&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -18,6 +20,14 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.font-lily-script {
+  font-family: 'Lily Script One', cursive;
+}
+
+.font-alatsi {
+  font-family: 'Alatsi', sans-serif;
 }
 
 a {
@@ -150,6 +160,33 @@ button:focus-visible {
   z-index: 999; /* Ensure Navbar stays above other elements */
 }
 
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  border-bottom: 2px solid #4F7942; /* Green border at the bottom */
+  height: 4rem; /* Adjust the height of the Navbar */
+  align-content: center;
+}
+
+.text-darkGreen {
+  color: #4F7942;
+  font-size: 1.2rem; /* Increase the font size of the text */
+}
+
+.link-hover:hover {
+  color: #133907;
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
 .image-section {
   flex: 0 0 65%; /* 60% height for the image section */
   overflow: hidden;
@@ -200,4 +237,10 @@ button:focus-visible {
 
 .link-hover:hover {
   color: #133907;
+}
+
+@media (max-width: 639px) {
+  .remove-button {
+    display: none;
+  }
 }

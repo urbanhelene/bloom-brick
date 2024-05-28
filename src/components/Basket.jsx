@@ -25,12 +25,20 @@ const Basket = ({ basket, updateQuantity, removeItem }) => {
                                     <h2 className='font-bold mb-1'>{item.title}</h2>
                                     <h3 className='font-bold mb-1'>{item.brand}</h3>
                                     <h4 className='font-bold mb-1'>{(item.price * item.quantity).toFixed(2)}€</h4>
-                                    <div className='flex items-center mb-1'>
-                                        <button onClick={() => updateQuantity(item.title, Math.max(1, item.quantity - 1))}>-</button>
-                                        <span className='mx-2'>{item.quantity}</span>
-                                        <button onClick={() => updateQuantity(item.title, item.quantity + 1)}>+</button>
+                                    <div className='button-container'>
+                                        <div className='quantity-buttons flex items-center mb-1'>
+                                            <button
+                                                onClick={() => item.quantity === 1 ? removeItem(item.title) : updateQuantity(item.title, item.quantity - 1)}>-
+                                            </button>
+                                            <span className='mx-2'>{item.quantity}</span>
+                                            <button onClick={() => updateQuantity(item.title, item.quantity + 1)}>+
+                                            </button>
+                                        </div>
+
+                                        <button onClick={() => removeItem(item.title)}
+                                                className='bg-darkRed rounded-md font-medium p-2 hidden sm:block small-button'>Remove
+                                        </button>
                                     </div>
-                                    <button onClick={() => removeItem(item.title)} className='bg-darkRed rounded-md font-medium p-2 small-button'>Remove</button>
                                 </div>
                             </div>
                         ))}
