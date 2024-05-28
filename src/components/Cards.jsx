@@ -1,11 +1,12 @@
-import PropTypes from 'prop-types';
-import P1 from '../assets/BrickFlower01.png';
+import PropTypes from 'prop-types'; // Import PropTypes, which basically checks if a prop is the correct type
+import P1 from '../assets/BrickFlower01.png'; // Import images to use in the Cards component, I used this to easily change the picture if needed
 import P2 from '../assets/BrickFlower02.png';
 import P3 from '../assets/BrickFlower03.jpg';
 import P4 from '../assets/BrickFlower04.png';
 import P5 from '../assets/BrickFlower05.png';
 import P6 from '../assets/BrickFlower06.jpg';
 
+// Define an array of product details, each product has an image, title, brand, and price that you can change easily
 const productDetails = [
     {
         img: P1,
@@ -46,6 +47,10 @@ const productDetails = [
 ];
 
 const Cards = ({ addToBasket }) => {
+    {/* This page is set up on a grid that has 2 rows with 5 columns each. So each row has 5 "boxes" of space. */}
+    {/* We wanted some empty space on the left and right side of the row on bigger devices to fit our figma design */}
+    {/* so we made "empty boxes" that act as margins. The layout is 1 empty box, 3 boxes with products and again 1 empty box */}
+    {/* This way we have space to the sides and the content in the middle, the empty boxes are then hidden on smaller screens */}
     return (
         <div className='w-full px-4 bg-white'>
             <div className='w-full py-4' style={{ backgroundColor: '#EDFFE8', marginBottom: '2rem', marginTop: '1rem' }}>
@@ -147,6 +152,7 @@ const Cards = ({ addToBasket }) => {
     );
 };
 
+// Define PropTypes for the Cards component to ensure correct prop types, ensures that expected data type is received
 Cards.propTypes = {
     addToBasket: PropTypes.func.isRequired,
 };

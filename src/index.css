@@ -1,66 +1,73 @@
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alatsi&display=swap');
 
+/* Import Tailwind CSS base, components, and utilities */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Set global styles for the root element */
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; /* Define font stack */
+  line-height: 1.5; /* Set line height */
+  font-weight: 400; /* Set font weight */
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color-scheme: light dark; /* Support for both light and dark color schemes */
+  color: rgba(255, 255, 255, 0.87); /* Set text color */
+  background-color: #242424; /* Set background color */
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-synthesis: none; /* Disable font synthesis */
+  text-rendering: optimizeLegibility; /* Optimize text rendering */
+  -webkit-font-smoothing: antialiased; /* Smoother fonts on webkit browsers */
+  -moz-osx-font-smoothing: grayscale; /* Smoother fonts on macOS */
 }
 
+/* Define custom font classes */
 .font-lily-script {
-  font-family: 'Lily Script One', cursive;
+  font-family: 'Lily Script One', cursive; /* Use Lily Script One font */
 }
 
 .font-alatsi {
-  font-family: 'Alatsi', sans-serif;
+  font-family: 'Alatsi', sans-serif; /* Use Alatsi font */
 }
 
+/* Set styles for anchor tags */
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  font-weight: 500; /* Set font weight */
+  color: #646cff; /* Set text color */
+  text-decoration: inherit; /* Inherit text decoration */
 }
 a:hover {
-  color: #535bf2;
+  color: #535bf2; /* Change color on hover */
 }
 
+/* Set styles for body element */
 body {
-  margin: 0;
-  display: flex;
+  margin: 0; /* Remove default margin */
+  display: flex; /* Use flexbox layout */
 }
 
+/* Set styles for h1-h4 elements */
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 3.2em; /* Set font size */
+  line-height: 1.1; /* Set line height */
 }
 
 h2 {
   font-size: 1.4em;
   line-height: 1.1;
-  color: #2E2E2E;
-  font-family: 'Inter', sans-serif;
+  color: #2E2E2E; /* Set text color */
+  font-family: 'Inter', sans-serif; /*set font family */
 }
 
 h3 {
   font-size: 0.9em;
   line-height: 1.1;
   color: #2E2E2E;
-  margin-top: 0.3rem;
+  margin-top: 0.3rem; /* Add top margin */
 }
 
 h4 {
@@ -70,177 +77,199 @@ h4 {
   margin-top: 0.8rem;
 }
 
+/* Set styles for button elements */
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+  border-radius: 8px; /* Rounded corners */
+  border: 1px solid transparent; /* Transparent border */
+  padding: 0.6em 1.2em; /* Padding inside button */
+  font-size: 1em; /* Set font size */
+  font-weight: 500; /* Set font weight */
+  font-family: inherit; /* Inherit font family */
+  background-color: #1a1a1a; /* Set background color */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: border-color 0.25s; /* Smooth border color transition */
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #203F17; /* Change border color on hover for the "buy" buttons*/
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 4px auto -webkit-focus-ring-color; /* Custom focus outline */
 }
 
+/* Light mode styles */
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: #213547; /* Text color in light mode */
+    background-color: #ffffff; /* Background color in light mode */
   }
   a:hover {
-    color: #747bff;
+    color: #747bff; /* Change anchor color on hover in light mode */
   }
   button {
-    background-color: #f9f9f9;
+    background-color: #f9f9f9; /* Button background in light mode */
   }
 }
 
+/* Products header styles */
 .products-header {
-  color: #4F7942;
-  font-family: 'Niconne', cursive;
-  font-size: 3rem;
-  width: 100%;
-  height: 5rem;
-  display: flex;
-  justify-content: center; /* Horizontally center the text */
-  align-items: center; /* Vertically center the text */
+  color: #4F7942; /* Set text color */
+  font-family: 'Niconne', cursive; /* Use Niconne font */
+  font-size: 3rem; /* Set font size */
+  width: 100%; /* Full width */
+  height: 5rem; /* Set height */
+  display: flex; /* Use flexbox layout */
+  justify-content: center; /* Center text horizontally */
+  align-items: center; /* Center text vertically */
 }
 
+/* Alternative products header styles */
 .products-header2 {
-  color: #4F7942;
-  font-family: 'Niconne', cursive;
-  font-size: 3rem;
-  width: 100%;
-  height: 10rem;
-  display: flex;
-  justify-content: center; /* Horizontally center the text */
-  align-items: center; /* Vertically center the text */
+  color: #4F7942; /* Set text color */
+  font-family: 'Niconne', cursive; /* Use Niconne font */
+  font-size: 3rem; /* Set font size */
+  width: 100%; /* Full width */
+  height: 10rem; /* Set height */
+  display: flex; /* Use flexbox layout */
+  justify-content: center; /* Center text horizontally */
+  align-items: center; /* Center text vertically */
 }
 
+/* Set grid display */
 .grid {
-  display: grid;
+  display: grid; /* Use grid layout */
 }
 
-/* Style for the empty grid box */
+/* Style for empty grid boxes */
 .empty-box {
-  width: 0; /* Set the width to 0 */
-  padding: 0 10rem; /* Add padding for the empty space */
+  width: 0; /* Set width to 0 */
+  padding: 0 10rem; /* Add padding for spacing to make the boxes not actually empty */
 }
 
+/* Card styles */
 .card {
-  border-radius: 1rem; /* Rounded edges for the boxes */
-  overflow: hidden; /* Ensures content does not overflow the box */
-  height: 24rem; /* Adjust the height as needed */
-  display: flex;
-  flex-direction: column;
+  border-radius: 1rem; /* Rounded corners */
+  overflow: hidden; /* Prevent overflow */
+  height: 24rem; /* Set height */
+  display: flex; /* Use flexbox layout */
+  flex-direction: column; /* Stack elements vertically */
 }
 
+/* Small button styles */
 .small-button {
-  align-self: flex-end;
-  margin-top: auto; /* Move the Remove button to the bottom */
-  margin-bottom: 0.5rem; /* Add a bottom margin to separate it from the quantity buttons */
+  align-self: flex-end; /* Align to the end */
+  margin-top: auto; /* Push to the bottom */
+  margin-bottom: 0.5rem; /* Add bottom margin */
 }
 
+/* Basket container styles */
 .basket-container .flex-1 {
-  max-width: 70%; /* Adjust the width of the flex items */
-  max-height: 300px;
+  max-width: 70%; /* Set maximum width */
+  max-height: 300px; /* Set maximum height */
 }
 
+/* Navbar styles */
 .navbar {
-  position: fixed; /* Fix the position of the Navbar */
-  top: 0; /* Align the Navbar to the top of the viewport */
-  width: 100%; /* Make the Navbar span the entire width of the viewport */
-  z-index: 999; /* Ensure Navbar stays above other elements */
+  position: fixed; /* Fix position */
+  top: 0; /* Align to top */
+  width: 100%; /* Full width */
+  z-index: 999; /* Ensure on top before anything else */
 }
 
+/* Navigation styles */
 nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 999;
-  border-bottom: 2px solid #4F7942; /* Green border at the bottom */
-  height: 4rem; /* Adjust the height of the Navbar */
-  align-content: center;
+  position: fixed; /* Fix position */
+  top: 0; /* Align to top */
+  width: 100%; /* Full width */
+  z-index: 999; /* Ensure on top */
+  border-bottom: 2px solid #4F7942; /* Bottom border */
+  height: 4rem; /* Set height */
+  align-content: center; /* Center content */
 }
 
+/* Text color style */
 .text-darkGreen {
-  color: #4F7942;
-  font-size: 1.2rem; /* Increase the font size of the text */
+  color: #4F7942; /* Set text color */
+  font-size: 1.2rem; /* Increase font size */
 }
 
+/* Link hover effect */
 .link-hover:hover {
-  color: #133907;
+  color: #133907; /* Change color on hover */
 }
 
+/* Media query for smaller screens */
 @media (max-width: 768px) {
   .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /* Use flexbox layout */
+    justify-content: space-between; /* Space out items */
+    align-items: center; /* Align items vertically */
   }
 }
 
+/* Image section styles */
 .image-section {
-  flex: 0 0 65%; /* 60% height for the image section */
-  overflow: hidden;
+  flex: 0 0 65%; /* Set flex basis */
+  overflow: hidden; /* Prevent overflow */
 }
 
+/* Text section styles */
 .text-section {
-  flex: 1; /* 40% height for the text section */
-  background-color: #FAFFE5;
-  position: relative;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex: 1; /* Take remaining space */
+  background-color: #FAFFE5; /* Set background color */
+  position: relative; /* Relative positioning */
+  padding: 1rem; /* Add padding */
+  display: flex; /* Use flexbox layout */
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: space-between; /* Space out items */
 }
 
+/* Text content styles */
 .text-content {
-  flex: 1;
-  overflow: hidden; /* Ensures text does not overflow the box */
+  flex: 1; /* Take remaining space */
+  overflow: hidden; /* Prevent overflow */
 }
 
+/* Small button styles */
 .small-button {
-  align-self: flex-end; /* Aligns the button to the bottom right */
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem; /* Small button text size */
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  color: white;
+  align-self: flex-end; /* Align to bottom right */
+  margin-top: 1rem; /* Add top margin */
+  padding: 0.5rem 1rem; /* Set padding */
+  font-size: 0.875rem; /* Set font size */
+  position: absolute; /* Absolute positioning */
+  bottom: 1rem; /* Align to bottom */
+  right: 1rem; /* Align to right */
+  color: white; /* Set text color */
 }
 
 /* Reset box styles to make sure they fit the new design */
 .w-full {
-  height: 100%;
+  height: 100%; /* Full height */
 }
 
+/* Basket container styles */
 .basket-container {
-  width: 100vw;
+  width: 100vw; /* Full viewport width */
 }
 
+/* Shadow styles */
 .shadow-xl {
-  box-shadow: 0 5px 15px -3px rgba(0, 0, 0, 0.25), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 15px -3px rgba(0, 0, 0, 0.25), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Add shadow */
 }
 
+/* Scale on hover */
 .hover\:scale-105:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /* Scale up on hover */
 }
 
+/* Link hover styles */
 .link-hover:hover {
-  color: #133907;
+  color: #133907; /* Link color on hover, so for navbar links and "take a look" link on Homepage */
 }
 
+/* Hide remove button on smaller screens */
 @media (max-width: 639px) {
   .remove-button {
-    display: none;
+    display: none; /* Hide element */
   }
 }
